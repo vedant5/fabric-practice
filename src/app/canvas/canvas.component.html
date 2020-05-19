@@ -1,0 +1,55 @@
+<div id="board">
+  <div class="example-button-row">
+    <button mat-raised-button color="accent" (click)="circle()">Circle</button>
+    <button mat-raised-button color="accent" (click)="box()">Box</button>
+    <button mat-raised-button color="accent" (click)="line()">
+      Line
+    </button>
+    <button mat-raised-button color="accent" (click)="triangle()">
+      Triangle
+    </button>
+    <button mat-raised-button color="accent" (click)="textBox()">
+      Text-Box
+    </button>
+    <mat-slide-toggle (change)="togglePen()"> Pen Mode </mat-slide-toggle>
+  </div>
+
+  <div class="example-button-row">
+    <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+
+    <button mat-raised-button color="warn" (click)="deleteObjects()">
+      Delete Selected Object
+    </button>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Canvas Color</mat-label>
+      <input matInput #toggleColor [value]="selectedColor" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="changeCanvasColor(toggleColor.value)">
+      submit canvas color
+    </button>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Canvas Color</mat-label>
+      <input matInput #toggleSize1 [value]="xDim" />
+      <input matInput #toggleSize2 [value]="yDim" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="changeCanvasSize(toggleSize1.value,toggleSize2.value)">
+      Resize Canvas
+    </button>
+
+    <button mat-raised-button color="warn" (click)="canvasToJson()">
+      <span style="font-weight:bolder;"> Save Screen</span>
+    </button>
+
+    <button mat-raised-button color="warn" (click)="loadJson()">
+      <span style="font-weight:bolder;"> Load Prev Screens</span>
+    </button>
+  </div>
+
+  <div class="screen">
+    <canvas id="canvas-container"></canvas>
+  </div>
+</div>

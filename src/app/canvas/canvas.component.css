@@ -1,0 +1,32 @@
+#board{
+  text-align: center;
+  margin-top: 10px;
+}
+
+#canvas-container {
+  border: 2px solid black;
+}
+
+button{
+  width: auto;
+}
+
+.screen {
+  /* text-align: center; */
+  margin:0 auto;
+  width:70% ;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+button{
+  margin : 2px;
+}
+
+mat-form-field{
+  margin-left: 20px;
+}
+
+.example-button-row{
+  margin-bottom: 10px;
+}
